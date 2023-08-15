@@ -10,22 +10,76 @@
       margin: 0;
       padding: 0;
     }
-    #header {
-      background: rgba(11, 26, 44, 0.75);
+
+      /*#header {
+      background: rgba(11, 26, 44, 0.75); 
+
       height: max-content;
       color: #fff;
       text-align: center;
       padding: 0.5vw;
     }
-    #header h1 {
+        #header h1 {
       font-size: 7vh;
       margin-top: 6vh;
-
     }
     #header h3 {
-  
       padding-bottom: 2vw;
-    }
+    }*/
+    #header {
+  background: linear-gradient(45deg, #828994, #000001, #767c82); /* Initial gradient colors */
+  height: max-content;
+  color: #fff;
+  text-align: center;
+  padding: 0.5vw;
+
+  /* Animated background */
+  background-size: 200% 200%;
+  animation: animateBackground 3s linear infinite alternate;
+}
+
+/* Define the animated background */
+@keyframes animateBackground {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+#header h1 {
+  font-size: 7vh;
+  margin-top: 6vh;
+  color: #c2beb5; /* Cool yellow color */
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Deeper text shadow effect */
+  animation: slideInUp 1s ease-in-out;
+}
+#header h3 {
+  padding-bottom: 2vw;
+  color: #8e9293; /* Light blue color */
+  font-style: italic;
+}
+
+/* Define slide-in-up animation */
+@keyframes slideInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Hover effect for header elements */
+#header h1:hover {
+  transform: scale(1.1);
+  color: #5a89b1; /* Greenish color */
+}
+
+#header h3:hover {
+  color: #11c9e6;
+}
+
+
+
+
+
+
+  
     #about {
       height: max-content;
       padding-top: 4vw;
@@ -161,7 +215,7 @@
   </div>
 
   <div id="portfolio">
-    <h2><u>Portfolio</h2></u>
+    <h2><u>Projects</h2></u>
     <div class="project">
       <a href="https://public.tableau.com/app/profile/aashutosh.chapagain2724/viz/AnalysisofCrimesinLA2020-2023_16908368809280/Dashboard1">
       <img src="../img/pro1.png" alt="Project 1">
